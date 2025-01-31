@@ -127,7 +127,7 @@ module "virtual-machine" {
   ip_version        = "IPv4"
   ## Virtual Machine
   vm_size        = "Standard_B1s"
-  public_key     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDb073dkknt6Y3/qvC7LZmUEDWpNQo1FNwbIpVlxxAdzIDyXkwvjuE+vu0yXwK3dR2tqe6ZkBs/hJiTzqIe7i3eubOeN7WeOfs//8t0TFExbDz29P786i7wu09nfX+VUJhmr2WXL7+yRf4pYwvhcQkDchcEs9u+/uxiHxzZRAIU0w5U7AOWlmoDpKJ3KGVP54LK4JhDSepQ5DBiICyffSjM+zigP6elp9ygzexHUT/euA/2noUdvEQ40QIq0t0fbvB4MB1I41P3oline1PNA9YlEzj8B3U6KUo6tr9iM6ATpUGvCIYg1kMAAJ1vDzPVIpo9Cpy9kkCuTngv3r6gA6U5vtFxmq2WCa9oKrPuN08bYDZnN5R0XNYERSo8UR78HwyDcUiB+XooXt3zuDkWK4Q90r3L2r14nVSIxmPYQAid/qJv9+1SgjIU649Q1WafeekZvL8MlaH6EYODNB5aYjCtPt1oXkykZGPRgRXYwqaqym4xbqDElv6seKJRpiA2pyE= rohit@rohit"
+  public_key     = "ssh-rsa /+/hJiTzqIe7i3eubOeEs9u+/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+zigP6elp9ygzexHUT/euA/2noUdvEQ40QIq0t0fbvB4MB1I41P3oline1PNA9YlEzj8B3U6KUo6tr9iM6ATpUGvCIYg1kMAAJ1vDzPVIpo9Cpy9kkCuTngv3r6gA6U5vtFxmq2WCa9oKrPuN08bYDZnN5R0XNYERSo8UR78HwyDcUiB+XooXt3zuDkWK4Q90r3L2r14nVSIxmPYQAid/qJv9+1SgjIU649Q1WafeekZvL8MlaH6EYODNB5aYjCtPt1oXkykZGPRgRXYwqaqym4xbqDElv6seKJRpiA2pyE= rohit@rohit"
   admin_username = "ubuntu"
   # admin_password                = "P@ssw0rd!123!" # It is compulsory when disable_password_authentication = false
   caching                         = "ReadWrite"

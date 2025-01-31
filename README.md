@@ -24,8 +24,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "virtual-machine" {
-  source                          = "cypik/virtual-machine/azure"
-  version                         = "1.0.2"
+  source                          = "git::https://github.com/SyncArcs/terraform-azure-virtual-machine.git?ref=v1.0.0"
   ## Tags
   name                            = "apouq"
   environment                     = "test"
@@ -100,8 +99,7 @@ module "virtual-machine" {
 
 ```hcl
 module "virtual-machine" {
-  source                          = "cypik/virtual-machine/azure"
-  version                         = "1.0.2"
+  source                          = "git::https://github.com/SyncArcs/terraform-azure-virtual-machine.git?ref=v1.0.0"
   ## Tags
   name                            = "apouq"
   environment                     = "test"
@@ -177,8 +175,7 @@ module "virtual-machine" {
 
 ```hcl
 module "virtual-machine" {
-  source                        = "cypik/virtual-machine/azure"
-  version                       = "1.0.2"
+  source                        = "git::https://github.com/SyncArcs/terraform-azure-virtual-machine.git?ref=v1.0.0"
   ## Tags
   name                          = "app"
   environment                   = "test"
@@ -257,14 +254,14 @@ module "virtual-machine" {
 This example demonstrates how to create various AZURE resources using the provided modules. Adjust the input values to suit your specific requirements.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/cypik/terraform-azure-virtual-machine/blob/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/SyncArcs/terraform-azure-virtual-machine/blob/master/_example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/cypik/terraform-azure-virtual-machine/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/SyncArcs/terraform-azure-virtual-machine/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
-Replace **MIT** and **Cypik** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **SyncArcs** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -284,7 +281,7 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/azure | 1.0.2 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/SyncArcs/terraform-azure-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -359,7 +356,7 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 | <a name="input_location"></a> [location](#input\_location) | Location where resource should be created. | `string` | `""` | no |
 | <a name="input_machine_count"></a> [machine\_count](#input\_machine\_count) | Number of Virtual Machines to create. | `number` | `0` | no |
 | <a name="input_managed"></a> [managed](#input\_managed) | Specifies whether the availability set is managed or not. Possible values are true (to specify aligned) or false (to specify classic). Default is true. | `bool` | `true` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'info@cypik.com' | `string` | `"info@cypik.com"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'SyncArcs' | `string` | `"SyncArcs"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_network_interface_sg_enabled"></a> [network\_interface\_sg\_enabled](#input\_network\_interface\_sg\_enabled) | Whether network interface security group is enabled. | `bool` | `false` | no |
 | <a name="input_network_security_group_id"></a> [network\_security\_group\_id](#input\_network\_security\_group\_id) | The ID of the Network Security Group which should be attached to the Network Interface. | `string` | `""` | no |
@@ -381,7 +378,7 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 | <a name="input_public_ip_prefix_id"></a> [public\_ip\_prefix\_id](#input\_public\_ip\_prefix\_id) | If specified then public IP address allocated will be provided from the public IP prefix resource. | `string` | `null` | no |
 | <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Name  (e.g. `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQ`). | `string` | `null` | no |
 | <a name="input_read"></a> [read](#input\_read) | Used when retrieving the Resource Group. | `string` | `"5m"` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/cypik/terraform-azure-virtual-machine"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/SyncArcs/terraform-azure-virtual-machine"` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the virtual network. | `string` | `""` | no |
 | <a name="input_reverse_fqdn"></a> [reverse\_fqdn](#input\_reverse\_fqdn) | A fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN. | `string` | `""` | no |
 | <a name="input_sa_type"></a> [sa\_type](#input\_sa\_type) | Specifies the identity type of the Storage Account. At this time the only allowed value is SystemAssigned. | `string` | `"SystemAssigned"` | no |
